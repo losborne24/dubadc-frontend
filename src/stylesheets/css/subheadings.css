@@ -1,0 +1,180 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 5;
+}
+
+.nav .nav-container {
+  background-color: #211f20;
+  width: 100vw;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*align-items: center;*/
+  top: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+}
+
+.nav a img {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  margin: 0 15px 0 0;
+  z-index: 5;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav a img:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.nav ul {
+  left: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+}
+
+.nav ul li {
+  margin: 0 15px 0 0;
+  color: white;
+  z-index: 5;
+}
+
+.nav ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+.nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 4px;
+  background: #7e317b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 2px;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.float-sm .fl-fl {
+  text-transform: uppercase;
+  width: 190px;
+  height: 50px;
+  position: fixed;
+  left: -140px;
+  z-index: 10;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.float-sm .fl-fl:hover {
+  left: 0;
+}
+
+.float-sm .fl-fl a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.float-sm .fa-2x {
+  color: white;
+  width: 40px;
+  margin-left: 10px;
+}
+
+.float-sm .fl-fl:hover {
+  left: 0;
+}
+
+.float-fb {
+  bottom: 63%;
+  background: black;
+}
+
+.float-tw {
+  bottom: 54%;
+  background: black;
+}
+
+.float-ig {
+  bottom: 45%;
+  background: black;
+}
+
+.float-fbTD {
+  bottom: 27%;
+  background: #7e317b;
+}
+
+.float-twTD {
+  bottom: 18%;
+  background: #7e317b;
+}
+
+.float-igTD {
+  bottom: 9%;
+  background: #7e317b;
+}
+
+.float-glTD {
+  bottom: 0%;
+  background: #7e317b;
+}
+
+.header {
+  height: 150px;
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+  background-color: #7e317b;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50px;
+  overflow: hidden;
+}
+
+.sub-title {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=subheadings.css.map */
