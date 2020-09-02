@@ -26,8 +26,9 @@ module.exports = {
           "article",
         ],
         singleTypes: [
-          // List of the Content Types you want to be able to request from Gatsby.
+          // List of the Single Types you want to be able to request from Gatsby.
           "home",
+          "university",
         ],
         queryLimit: 1000,
       },

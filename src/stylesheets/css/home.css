@@ -324,17 +324,11 @@ html {
           transform: rotate(3deg) scale(1.01);
 }
 
-.fade-in-bottom {
-  -webkit-animation: fade-in-bottom 3s forwards;
-          animation: fade-in-bottom 3s forwards;
-}
-
-.fade-in-left {
-  -webkit-animation: fade-in-left 2s forwards;
-          animation: fade-in-left 2s forwards;
-}
-
-h5 {
+.react-reveal h1,
+.react-reveal h2,
+.react-reveal h3,
+.react-reveal h4,
+.react-reveal h5 {
   font-size: 1.2rem;
   color: #7e317b;
   border-radius: 25px;
@@ -342,57 +336,10 @@ h5 {
   text-align: center;
   padding: 1px;
   font-weight: normal;
+  padding: 5px;
 }
 
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes fade-in-bottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@-webkit-keyframes fade-in-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes fade-in-left {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
+.react-reveal p {
+  font-size: 18px;
 }
 /*# sourceMappingURL=home.css.map */

@@ -3,8 +3,9 @@ import Fade from "react-reveal/Fade"
 import { StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "../stylesheets/css/home.css"
 import ReactPlayer from "react-player"
+import ReactMarkdown from "react-markdown"
+import "../stylesheets/css/home.css"
 
 const IndexPage = () => (
   <>
@@ -15,17 +16,19 @@ const IndexPage = () => (
       query={graphql`
         query {
           allStrapiHome {
-            nodes {
-              ContentMedia1 {
-                publicURL
+            edges {
+              node {
+                ContentMedia1 {
+                  publicURL
+                }
+                ContentMedia2 {
+                  publicURL
+                }
+                PromoVideo {
+                  publicURL
+                }
+                Contents
               }
-              ContentMedia2 {
-                publicURL
-              }
-              PromoVideo {
-                publicURL
-              }
-              Contents
             }
           }
         }
@@ -41,7 +44,7 @@ const IndexPage = () => (
               playsinline={true}
               width="100vw"
               height="auto"
-              url={data.allStrapiHome.nodes[0].PromoVideo.publicURL}
+              url={data.allStrapiHome.edges[0].node.PromoVideo.publicURL}
             />
 
             <div className="promo-container">
@@ -58,8 +61,11 @@ const IndexPage = () => (
             </a>
             <div id="container">
               <div className="inner-container">
-                <Fade left cascade>
-                  <div id="content">{data.allStrapiHome.nodes[0].Contents}</div>{" "}
+                <Fade left casade>
+                  <ReactMarkdown
+                    id="content"
+                    source={data.allStrapiHome.edges[0].node.Contents}
+                  />
                 </Fade>
                 <Fade bottom>
                   <div id="videos">
@@ -71,10 +77,11 @@ const IndexPage = () => (
                         loop={true}
                         muted={true}
                         playsinline={true}
-                        width="auto"
-                        height="auto"
+                        width="224px"
+                        height="400px"
                         url={
-                          data.allStrapiHome.nodes[0].ContentMedia1.publicURL
+                          data.allStrapiHome.edges[0].node.ContentMedia1
+                            .publicURL
                         }
                       />
                     </div>
@@ -86,10 +93,11 @@ const IndexPage = () => (
                         loop={true}
                         muted={true}
                         playsinline={true}
-                        width="auto"
-                        height="auto"
+                        width="224px"
+                        height="400px"
                         url={
-                          data.allStrapiHome.nodes[0].ContentMedia2.publicURL
+                          data.allStrapiHome.edges[0].node.ContentMedia2
+                            .publicURL
                         }
                       />
                     </div>
