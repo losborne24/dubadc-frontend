@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../scss/college.scss"
+        "../scss/college.module.scss"
     ],
     "names": [],
-    "file": "college.css"
+    "file": "college.module.css"
 }

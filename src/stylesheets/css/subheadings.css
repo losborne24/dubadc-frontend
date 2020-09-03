@@ -152,6 +152,29 @@ body {
   background: #7e317b;
 }
 
+.react-reveal {
+  padding: 50px;
+}
+
+.react-reveal h1,
+.react-reveal h2,
+.react-reveal h3,
+.react-reveal h4,
+.react-reveal h5 {
+  font-size: 1.2rem;
+  color: #7e317b;
+  border-radius: 25px;
+  border: 2px #7e317b solid;
+  text-align: center;
+  padding: 1px;
+  font-weight: normal;
+  padding: 5px;
+}
+
+.react-reveal p {
+  font-size: 18px;
+}
+
 .header {
   height: 150px;
   width: 100vw;
@@ -170,6 +193,7 @@ body {
           align-items: center;
   top: 50px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .sub-title {

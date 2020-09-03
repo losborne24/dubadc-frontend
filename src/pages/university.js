@@ -5,15 +5,17 @@ import ReactMarkdown from "react-markdown"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactPlayer from "react-player"
-
+import UniversityStyles from "../stylesheets/css/university.module.css"
 import { StaticQuery } from "gatsby"
-import "../stylesheets/css/university.css"
 
 const IndexPage = () => (
   <>
     <Layout>
       <SEO title="University" />
     </Layout>
+    <div class="header">
+      <h5 class="sub-title">University</h5>
+    </div>
     <StaticQuery
       query={graphql`
         query {
@@ -46,20 +48,21 @@ const IndexPage = () => (
       render={data => {
         return (
           <>
-            <div id="container">
-              <div className="inner-container">
+            <div className={UniversityStyles.container} id="container">
+              <div className={UniversityStyles.innerContainer}>
                 <Fade left casade>
                   <ReactMarkdown
-                    id="content"
+                    id="contents"
+                    className={UniversityStyles.contents}
                     source={data.allStrapiUniversity.edges[0].node.Contents}
                   />
                 </Fade>
                 <Fade bottom>
-                  <div id="videos">
-                    <div className="vid-1">
-                      <div className="overlay-1"></div>
+                  <div className={UniversityStyles.video}>
+                    <div className={UniversityStyles.vid1}>
+                      <div className={UniversityStyles.overlay1}></div>
                       <ReactPlayer
-                        id="content-video-1"
+                        className={UniversityStyles.contentVideo1}
                         playing={true}
                         loop={true}
                         muted={true}
@@ -72,10 +75,10 @@ const IndexPage = () => (
                         }
                       />
                     </div>
-                    <div className="vid-2">
-                      <div className="overlay-2"></div>
+                    <div className={UniversityStyles.vid2}>
+                      <div className={UniversityStyles.overlay2}></div>
                       <ReactPlayer
-                        id="content-video-2"
+                        className={UniversityStyles.contentVideo2}
                         playing={true}
                         loop={true}
                         muted={true}

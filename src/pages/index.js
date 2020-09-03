@@ -1,11 +1,13 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
-import { StaticQuery } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactPlayer from "react-player"
 import ReactMarkdown from "react-markdown"
-import "../stylesheets/css/home.css"
+import HomeStyles from "../stylesheets/css/home.module.css"
+import "../stylesheets/css/style.css"
+import "../stylesheets/css/subheadings.css"
 
 const IndexPage = () => (
   <>
@@ -37,7 +39,7 @@ const IndexPage = () => (
         return (
           <>
             <ReactPlayer
-              id="promo"
+              className={HomeStyles.promo}
               playing={true}
               loop={true}
               muted={true}
@@ -47,32 +49,33 @@ const IndexPage = () => (
               url={data.allStrapiHome.edges[0].node.PromoVideo.publicURL}
             />
 
-            <div className="promo-container">
-              <h1 className="promo-text">
+            <div className={HomeStyles.promoContainer}>
+              <h1 className={HomeStyles.promoText}>
                 <b>
                   DURHAM UNIVERSITY
                   <br /> BADMINTON CLUB
                 </b>
               </h1>
             </div>
-            <a id="scroll" href="#container">
-              <span id="span-1"></span>
-              <span id="span-2"></span>
+            <a className={HomeStyles.scroll} href="#container">
+              <span className={HomeStyles.span1}></span>
+              <span className={HomeStyles.span2}></span>
             </a>
-            <div id="container">
-              <div className="inner-container">
+            <div className={HomeStyles.container} id="container">
+              <div className={HomeStyles.innerContainer}>
                 <Fade left casade>
                   <ReactMarkdown
-                    id="content"
+                    id="contents"
+                    className={HomeStyles.contents}
                     source={data.allStrapiHome.edges[0].node.Contents}
                   />
                 </Fade>
                 <Fade bottom>
-                  <div id="videos">
-                    <div className="vid-1">
-                      <div className="overlay-1"></div>
+                  <div className={HomeStyles.video}>
+                    <div className={HomeStyles.vid1}>
+                      <div className={HomeStyles.overlay1}></div>
                       <ReactPlayer
-                        id="content-video-1"
+                        className={HomeStyles.contentVideo1}
                         playing={true}
                         loop={true}
                         muted={true}
@@ -85,10 +88,10 @@ const IndexPage = () => (
                         }
                       />
                     </div>
-                    <div className="vid-2">
-                      <div className="overlay-2"></div>
+                    <div className={HomeStyles.vid2}>
+                      <div className={HomeStyles.overlay2}></div>
                       <ReactPlayer
-                        id="content-video-2"
+                        className={HomeStyles.contentVideo2}
                         playing={true}
                         loop={true}
                         muted={true}
