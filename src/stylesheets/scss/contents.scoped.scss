@@ -1,10 +1,14 @@
 $palat: #7e317b;
 
-.inner-container {
-  left: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  background-color: #eeeeee;
+
+  .inner-container {
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contents {
