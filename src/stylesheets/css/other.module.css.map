@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../scss/other.module.scss"
-    ],
-    "names": [],
-    "file": "other.module.css"
-}

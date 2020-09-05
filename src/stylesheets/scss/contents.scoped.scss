@@ -1,0 +1,29 @@
+$palat: #7e317b;
+
+.inner-container {
+  left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 1.2rem;
+    color: $palat;
+    border-radius: 25px;
+    border: 2px $palat solid;
+    text-align: center;
+    padding: 1px;
+    font-weight: normal;
+    padding: 5px;
+  }
+  p {
+    font-size: 18px;
+  }
+  padding: 50px;
+}

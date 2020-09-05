@@ -10,17 +10,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Image from "./image"
+import "../stylesheets/scss/style.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div>
         <div className="nav">
           <Link to="/">
             <Image />
@@ -31,7 +26,7 @@ const Layout = ({ children }) => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/news/">News</Link>
+                <Link to="/about/">About</Link>
               </li>
               <li>
                 <Link to="/university/">University</Link>
