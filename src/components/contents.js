@@ -19,33 +19,24 @@ const Contents = ({ data }) => {
             />
           </Fade>
           <Fade bottom>
-            <div className="video">
-              <div className="vid-1">
-                <div className="overlay-1"></div>
-                <ReactPlayer
-                  className="content-video-1"
-                  playing={true}
-                  loop={true}
-                  muted={true}
-                  playsinline={true}
-                  width="224px"
-                  height="400px"
-                  url={data.ContentMedia1.publicURL}
-                />
-              </div>
-              <div className="vid-2">
-                <div className="overlay-2"></div>
-                <ReactPlayer
-                  className="content-video-2"
-                  playing={true}
-                  loop={true}
-                  muted={true}
-                  playsinline={true}
-                  width="224px"
-                  height="400px"
-                  url={data.ContentMedia2.publicURL}
-                />
-              </div>
+            <div className="media-container">
+              {data.ContentMedia.map(media => {
+                return (
+                  <div className="media" key={media.id}>
+                    <div className="overlay"></div>
+                    <ReactPlayer
+                      className="content-video"
+                      playing={true}
+                      loop={true}
+                      muted={true}
+                      playsinline={true}
+                      width="224px"
+                      height="400px"
+                      url={media.url}
+                    />
+                  </div>
+                )
+              })}
             </div>
           </Fade>
         </div>

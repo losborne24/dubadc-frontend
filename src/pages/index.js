@@ -18,19 +18,17 @@ const IndexPage = () => (
           allStrapiHome {
             edges {
               node {
-                ContentMedia1 {
-                  id
-                  publicURL
-                }
-                ContentMedia2 {
-                  id
-                  publicURL
+                Contents {
+                  Contents
+                  ContentMedia {
+                    id
+                    url
+                  }
                 }
                 PromoVideo {
                   id
                   publicURL
                 }
-                Contents
               }
             }
           }
@@ -66,7 +64,7 @@ const IndexPage = () => (
               </div>
             </div>
 
-            <Contents data={data.allStrapiHome.edges[0].node} />
+            <Contents data={data.allStrapiHome.edges[0].node.Contents} />
           </>
         )
       }}

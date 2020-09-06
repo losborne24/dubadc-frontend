@@ -7,7 +7,8 @@ $palat: #7e317b;
     left: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    position: absolute;
   }
 }
 
@@ -30,4 +31,38 @@ $palat: #7e317b;
     font-size: 18px;
   }
   padding: 50px;
+}
+.media-container {
+  .media {
+    position: relative;
+    border: 3px solid #66eeb3;
+    margin: 0 50px 0 50px;
+
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border: 4px solid $palat;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.media-container:nth-child(even) {
+  .media {
+    left: -50px;
+    top: 50px;
+    .overlay {
+      transform: rotate(-3deg) scale(1.01);
+    }
+  }
+}
+.media-container:nth-child(odd) {
+  .media {
+    top: -50px;
+    left: 50px;
+    .overlay {
+      transform: rotate(3deg) scale(1.01);
+    }
+  }
 }

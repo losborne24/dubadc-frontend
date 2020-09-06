@@ -21,14 +21,13 @@ const IndexPage = () => (
           allStrapiUniversity {
             edges {
               node {
-                Contents
-                ContentMedia1 {
+                Contents {
                   id
-                  publicURL
-                }
-                ContentMedia2 {
-                  id
-                  publicURL
+                  Contents
+                  ContentMedia {
+                    id
+                    url
+                  }
                 }
                 Committee {
                   id
@@ -45,7 +44,12 @@ const IndexPage = () => (
         }
       `}
       render={data => {
-        return <Contents data={data.allStrapiUniversity.edges[0].node} />
+        return (
+          <>
+            <div className="profiles-container"></div>
+            <Contents data={data.allStrapiUniversity.edges[0].node.Contents} />
+          </>
+        )
       }}
     />
   </>
