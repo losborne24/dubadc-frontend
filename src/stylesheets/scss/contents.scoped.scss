@@ -7,12 +7,15 @@ $palat: #7e317b;
     left: 200px;
     display: flex;
     justify-content: center;
-
     position: absolute;
+    & > * {
+      padding: 50px;
+    }
   }
 }
 
 .contents {
+  padding: 50px;
   h1,
   h2,
   h3,
@@ -30,7 +33,6 @@ $palat: #7e317b;
   p {
     font-size: 18px;
   }
-  padding: 50px;
 }
 .media-container {
   .media {
@@ -48,21 +50,17 @@ $palat: #7e317b;
   }
 }
 
-.media-container:nth-child(even) {
-  .media {
-    left: -50px;
-    top: 50px;
-    .overlay {
-      transform: rotate(-3deg) scale(1.01);
-    }
+.media:nth-child(odd) {
+  left: -50px;
+  top: 50px;
+  .overlay {
+    transform: rotate(-3deg) scale(1.01);
   }
 }
-.media-container:nth-child(odd) {
-  .media {
-    top: -50px;
-    left: 50px;
-    .overlay {
-      transform: rotate(3deg) scale(1.01);
-    }
+.media:nth-child(even) {
+  top: -50px;
+  left: 50px;
+  .overlay {
+    transform: rotate(3deg) scale(1.01);
   }
 }

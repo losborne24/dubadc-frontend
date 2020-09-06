@@ -11,13 +11,11 @@ const Contents = ({ data }) => {
     <>
       <div className="container" id="container">
         <div className="inner-container">
-          <Fade left casade>
-            <ReactMarkdown
-              id="contents"
-              className="contents"
-              source={data.Contents}
-            />
-          </Fade>
+          <div className="contents-container">
+            <Fade left casade>
+              <ReactMarkdown className="contents" source={data.Contents} />
+            </Fade>
+          </div>
           <Fade bottom>
             <div className="media-container">
               {data.ContentMedia.map(media => {
