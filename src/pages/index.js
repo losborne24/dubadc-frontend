@@ -57,8 +57,9 @@ const IndexPage = () => (
                 </a>
               </div>
             </div>
-
-            <TextContents data={data.allStrapiHome.edges[0].node} />
+            <div className="contents-container">
+              <TextContents data={data.allStrapiHome.edges[0].node} />
+            </div>
           </>
         )
       }}
