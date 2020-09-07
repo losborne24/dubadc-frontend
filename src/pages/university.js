@@ -31,14 +31,14 @@ class App extends React.Component {
           isFlipped={this.state.isFlipped}
           flipDirection="horizontal"
         >
-          <Test member={this.props.member} />
-          <Test2 member={this.props.member} />
+          <Front member={this.props.member} />
+          <Back member={this.props.member} />
         </ReactCardFlip>
       </div>
     )
   }
 }
-const Test = props => {
+const Front = props => {
   return (
     <div className="front">
       <div className="text-container">
@@ -49,7 +49,7 @@ const Test = props => {
   )
 }
 
-const Test2 = props => {
+const Back = props => {
   return (
     <div className="back">
       <div className="image-container">

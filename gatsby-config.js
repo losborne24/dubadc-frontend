@@ -28,7 +28,11 @@ module.exports = {
         singleTypes: [
           // List of the Single Types you want to be able to request from Gatsby.
           "home",
+          "about",
           "university",
+          "development",
+          "college",
+          "other",
         ],
         queryLimit: 1000,
       },

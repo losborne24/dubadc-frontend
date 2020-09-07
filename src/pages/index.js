@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Contents from "../components/contents"
+import TextContents from "../components/TextContents"
 
 import SEO from "../components/seo"
 import ReactPlayer from "react-player"
@@ -18,13 +18,7 @@ const IndexPage = () => (
           allStrapiHome {
             edges {
               node {
-                Contents {
-                  Contents
-                  ContentMedia {
-                    id
-                    url
-                  }
-                }
+                Contents
                 PromoVideo {
                   id
                   publicURL
@@ -64,7 +58,7 @@ const IndexPage = () => (
               </div>
             </div>
 
-            <Contents data={data.allStrapiHome.edges[0].node.Contents} />
+            <TextContents data={data.allStrapiHome.edges[0].node} />
           </>
         )
       }}
